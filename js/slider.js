@@ -1,20 +1,37 @@
 "use strict";
 
-let popularPproductSlider = document.getElementById("popular-product__slider");
-let popularPproductNext = document.getElementsByClassName("slider__pro-after");
-let popularPproductPrev = document.getElementsByClassName("slider__pro-before");
-let popularPproductItem = document.getElementById("popular-product__slide");
+let popularProductSlider = document.getElementById("popular-product__slider");
 
-productScroll(popularPproductSlider, popularPproductNext, popularPproductPrev, popularPproductItem)
+if (popularProductSlider) {
+  let next_1 = popularProductSlider.getElementsByClassName("slider__after");
+  let prev_1 = popularProductSlider.getElementsByClassName("slider__before");
+  let item_1 = popularProductSlider.getElementsByClassName("slider__list")[0];
+
+  productScroll(popularProductSlider, next_1, prev_1, item_1)
+}
 
 let ourPartnersSlider = document.getElementById("our-partners__slider");
-let ourPartnersNext = document.getElementsByClassName("slider__part-after");
-let ourPartnersPrev = document.getElementsByClassName("slider__part-before");
-let ourPartnersItem = document.getElementById("our-partners__slide");
 
-productScroll(ourPartnersSlider, ourPartnersNext, ourPartnersPrev, ourPartnersItem)
+if (ourPartnersSlider) {
+  let next_2 = ourPartnersSlider.getElementsByClassName("slider__after");
+  let prev_2 = ourPartnersSlider.getElementsByClassName("slider__before");
+  let item_2 = ourPartnersSlider.getElementsByClassName("slider__list")[0];
+
+  productScroll(ourPartnersSlider, next_2, prev_2, item_2)
+}
+
+let viewedProductSlider = document.getElementById("viewed-product__slider");
+
+if (viewedProductSlider) {
+  let next_3 = viewedProductSlider.getElementsByClassName("slider__after");
+  let prev_3 = viewedProductSlider.getElementsByClassName("slider__before");
+  let item_3 = viewedProductSlider.getElementsByClassName("slider__list")[0];
+
+  productScroll(viewedProductSlider, next_3, prev_3, item_3)
+}
 
 function productScroll(slider, next, prev, item) {
+
   for (let i = 0; i < next.length; i++) {
     //refer elements by class name
 
